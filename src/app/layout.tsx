@@ -1,6 +1,8 @@
 import './globals.css'
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { PHProvider, PostHogPageview } from './providers'
 
 const newake = localFont({
   src: './fonts/Newake.otf',
@@ -22,7 +24,12 @@ export default function RootLayout({
     <html lang="en" style={{
       scrollSnapType: 'y mandatory',
     }}>
-      <body className={`${newake.variable}`}>{children}</body>
+      <Suspense>
+        <PostHogPageview />
+      </Suspense>
+      <PHProvider>
+        <body className={`${newake.variable}`}>{children}</body>
+      </PHProvider>
     </html>
   )
 }
