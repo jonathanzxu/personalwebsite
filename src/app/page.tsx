@@ -9,7 +9,7 @@ import { SiSubstack } from 'react-icons/si';
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
-
+// hi
 export default function Home() {
   const [scrollPos, setScrollPos] = useState(0);
   useEffect(() => {
