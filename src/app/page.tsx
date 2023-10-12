@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Spline from '@splinetool/react-spline';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { FaXTwitter } from 'react-icons/fa6';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import { SiSubstack } from 'react-icons/si';
