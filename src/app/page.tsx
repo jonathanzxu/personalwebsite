@@ -22,7 +22,7 @@ export default function Home() {
     }
   }, []);
 
-  // const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
@@ -119,6 +119,7 @@ export default function Home() {
           </a>
         </div>
       </motion.div> */}
+      
       { (scrollPos < 10) &&
       <motion.div>
         <Spline scene="https://prod.spline.design/iVqodeQXuOPQpDf4/scene.splinecode" style={{
